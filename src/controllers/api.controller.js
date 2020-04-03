@@ -60,5 +60,11 @@ usersCtrl.SignIn = async (req, res) => {
   else
       console.log("Algún dato es incorrecto o no existe")
   }
+//*********************posible error */
+  usersCtrl.logout = (req, res) => {
+    jreq.logout();
+    req.flash("success_msg", "Ha cerrado sesión");
+    res.redirect("/users/signin");
+  };
 
 module.exports = usersCtrl;

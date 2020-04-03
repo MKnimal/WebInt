@@ -3,7 +3,8 @@ const router = require("express").Router();
 const {
   getUsers,
   createUser,
-  SignIn
+  SignIn,
+  logout
 } = require("../controllers/api.controller");
 
 // Routes
